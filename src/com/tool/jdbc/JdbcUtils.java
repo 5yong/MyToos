@@ -114,7 +114,7 @@ public class JdbcUtils {
 		Connection con = local.get();//获取当前线程的事务连接
 		if (con != connection) {//如果参数连接，与当前事务连接不同，说明这个连接不是当前事务，可以关闭！
 			if (!connection.isClosed()&&connection != null) {
-				connection.close();
+				 connection.close();
 			}
 		}
 	
